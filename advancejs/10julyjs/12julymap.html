@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = ["raju", "sumit", "sid", "siddarth"];
+        const ans = name.map(function(key){
+            return "<li>" + key + "</li>";
+        });
+
+        console.log(ans);
+        document.writeln("<ol>" + ans+ "</ol>");
+        
+    </script>
+</body>
+</html>

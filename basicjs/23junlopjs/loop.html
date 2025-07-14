@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    select month;
+    <select>
+    <script>
+        for( var i=1;i<=12;i++){
+            document.write("<option>",i,"</option>");
+        }
+
+    </script>
+    </select>
+     select date;
+    <select>
+    <script>
+        for( var i=1;i<=31;i++){
+            document.write("<option>",i,"</option>");
+        }
+
+    </script>
+    </select>
+     select year;
+    <select>
+    <script>
+        for( var i=1970;i<=2025;i++){
+            document.write("<option>",i,"</option>");
+        }
+
+    </script>
+    </select>
+
+    select day;
+    <select>
+        <script>
+            const week =["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+            for(var i=0;i<week.length;i++){
+                document.writeln("<option>",week[i],"</option>");
+                
+            }
+        </script>
+    </select>
+    <br>
+    select day1
+    <select>
+    <script>
+        const week1 = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        for (let i = 0; i < week1.length; i++) {
+            document.write("<option>" + week1[i] + "</option>");
+        }
+    </script>
+</select>
+
+
+<!-- pratice  -->
+select day;
+<select>
+    <script>
+   for(var i=1;i<=12;i++){
+    document.writeln("<option>",i,"</option>");
+   }
+    </script>
+</select>
+</body>
+</html>

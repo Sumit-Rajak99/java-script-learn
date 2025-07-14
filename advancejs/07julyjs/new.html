@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Form</title>
+  <script>
+    function display() {
+      const formContainer = document.querySelectorAll(".demo");
+      const labels = document.querySelectorAll(".demo1");
+
+      // Apply styles to form container
+      for (let i = 0; i < formContainer.length; i++) {
+        formContainer[i].style.backgroundColor = "#ff4d4d";
+        formContainer[i].style.width = "320px";
+        formContainer[i].style.padding = "20px";
+        formContainer[i].style.border = "3px solid #000";
+        formContainer[i].style.borderRadius = "25px";
+        formContainer[i].style.fontWeight = "bold";
+        formContainer[i].style.color = "white";
+        formContainer[i].style.boxShadow = "4px 4px 15px rgba(0, 0, 0, 0.5)";
+      }
+
+      // Apply styles to labels
+      for (let i = 0; i < labels.length; i++) {
+        labels[i].style.backgroundColor = "#ff6666";
+        labels[i].style.padding = "6px";
+        labels[i].style.borderRadius = "10px";
+        labels[i].style.marginBottom = "8px";
+        labels[i].style.display = "inline-block";
+        labels[i].style.fontWeight = "bold";
+        labels[i].style.color = "white";
+      }
+
+      // Style inputs
+      const inputs = document.querySelectorAll("input");
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].style.padding = "6px";
+        inputs[i].style.borderRadius = "8px";
+        inputs[i].style.border = "1px solid #333";
+        inputs[i].style.marginBottom = "10px";
+      }
+
+      // ⬇️ Salary Addition Logic
+      let basic = Number(document.getElementById("one").value);
+      let ta = Number(document.getElementById("two").value);
+      let da = Number(document.getElementById("three").value);
+      let hra = Number(document.getElementById("four").value);
+
+      let total = basic + ta + da + hra;
+
+      document.getElementById("result").innerText = "Total Salary: ₹" + total;
+
+      // ✅ Corrected tax alert condition
+      if (total <= 100000) {
+        alert("You should pay tax.");
+      } else {
+        alert("You do not need to pay tax.");
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="demo">
+    <span class="demo1">Enter Basic Salary:</span>
+    <input type="text" id="one"><br>
+
+    <span class="demo1">Enter TA:</span>
+    <input type="text" id="two"><br>
+
+    <span class="demo1">Enter DA:</span>
+    <input type="text" id="three"><br>
+
+    <span class="demo1">Enter HRA:</span>
+    <input type="text" id="four"><br><br>
+
+    <button onclick="display()">Submit</button><br><br>
+
+    <div id="result" style="font-size: 18px; font-weight: bold;"></div>
+  </div>
+
+</body>
+</html>

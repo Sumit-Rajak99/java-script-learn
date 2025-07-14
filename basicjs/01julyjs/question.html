@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num = parseInt(prompt("Enter any number:"));
+
+    if (isNaN(num)) {
+        console.log("Invalid input. Please enter a valid number.");
+    } 
+    else if (num % 2 != 0) {
+        console.log(`Number ${num} is odd.`);
+        console.log("Table:");
+        for (let i = 1; i <= 10; i++) {
+                console.log(`${num} x ${i} = ${num * i}`);
+        }
+    }
+     else {
+        console.log(`Number ${num} is even.`);
+        console.log("Reverse Table:");
+        for (let i = 10; i >= 1; i--) {
+            console.log(`${num} x ${i} = ${num * i}`);
+        }
+    }
+</script>
+
+
+</body>
+</html>

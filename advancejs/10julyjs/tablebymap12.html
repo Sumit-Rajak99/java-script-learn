@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Table</title>
+  <script>
+    function display() {
+      const student = [
+        { rollno: 121, name: "sumit", class: "Bca", fess: 12000 },
+        { rollno: 122, name: "raj", class: "Mca", fess: 22000 },
+        { rollno: 123, name: "raj", class: "Bcom", fess: 19000 },
+        { rollno: 124, name: "sumit", class: "Bsc", fess: 13000 },
+        { rollno: 126, name: "sid", class: "Ba", fess: 11000 }
+      ];
+
+      const rows = student.map((key) => {
+        return `<tr>
+                  <td>${key.rollno}</td>
+                  <td>${key.name}</td>
+                  <td>${key.class}</td>
+                  <td>${key.fess}</td>
+                </tr>`;
+      });
+
+      document.getElementById("demo").innerHTML = `
+        <table border="2px solid">
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Fees</th>
+          </tr>
+          ${rows}
+        </table>`;
+    }
+  </script>
+</head>
+<body>
+  <div id="demo"></div>
+  <button onclick="display()">Click here</button>
+</body>
+</html>

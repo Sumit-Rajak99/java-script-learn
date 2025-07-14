@@ -1,0 +1,36 @@
+.container{
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 700px;
+    gap: 10px;
+    row-gap: 30px;
+    column-gap: 20px;
+
+    /* shorthand */
+    grid-gap: 20px 30px;
+}
+body{
+    background-color: pink;
+}
+.item{
+    background-color: blue;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+.item1{
+    grid-column: 1 /3;
+}
+.item3{
+    grid-row: 2/4;
+}
+
+/* media query */
+
+
+@media  screen and (max-width:768) {
+    body{
+        background-color:yellow;
+    }
+}

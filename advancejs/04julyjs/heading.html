@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display1() {
+            const element = document.getElementsByTagName("h1");
+            for (var i = 0; i < element.length; i++) {
+                element[i].style.color = "red";
+            }
+        }
+
+        function display2() {
+            const element = document.getElementsByTagName("h2");
+            for (var i = 0; i < element.length; i++) {
+                element[i].style.color = "green";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="display1()">click here</button>
+    <button onclick="display2()">click here</button>
+
+    <h1>welcome to bhopal</h1>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </div>
+    <h2>welcome to mp nagar</h2>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </div>
+    <h1>welcome to indore</h1>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </div>
+    <h2>welcome to ahilya bai nagar</h2>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </div>
+    <h1>welcome to mumbai</h1>
+</body>
+</html>

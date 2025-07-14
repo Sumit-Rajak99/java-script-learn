@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+    const nodelist = document.querySelectorAll(".demo");
+    const nodelist1 = document.querySelectorAll(".demo1");
+
+    for (var i = 0; i < nodelist.length; i++) {
+      nodelist[i].style.backgroundColor = "red";
+      nodelist[i].style.width="300px";
+      nodelist[i].style.height="300px";
+       nodelist[i].style.border="2px solid black";
+       nodelist[i].style.borderRadius="20px";
+       nodelist[i].style.fontWeight="bold";
+    }
+
+    for (var i = 0; i < nodelist1.length; i++) {
+      nodelist1[i].style.backgroundColor = "red"; 
+    }
+}
+
+    </script>
+</head>
+<body>
+
+    
+    
+    <div>
+
+        <span class="f1"> Enter Basic salary </span>  <input type="text" id="one">
+        <br>
+        <span> Enter TA </span>  <input type="text" id="two">
+        <br>
+        <span> Enter DA </span>    <input type="text" id="three">
+        <br>
+        <span> Enter HRA </span>    <input type="text" id="four">
+        <br>
+        <button id="bt"> submit </button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            const num=["bhopal","bari","bhopal","bari","bhopal","indore"];
+            const ans=num.filter((key)=>{
+                if(key=="bhopal"){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            })
+            console.log(num);
+            console.log(ans);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">click here</button>
+</body>
+</html>

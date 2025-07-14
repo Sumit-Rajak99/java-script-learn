@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var myint;
+
+        function myfun(){
+            document.getElementById("demo").innerHTML += "HELLO SID ";
+        }
+
+        function display(){
+            myint = setInterval(myfun, 1000);  
+        }
+
+        function mystop(){
+            clearInterval(myint);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">click here</button>
+    <button onclick="mystop()">stop here</button>
+    <br>
+    <span id="demo"></span>
+</body>
+</html>

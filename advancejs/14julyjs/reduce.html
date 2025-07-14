@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            const num=[2,3,4,6,7,8];
+            const ans=num.reduce((key,item)=>{
+               return key+item;
+            },100)
+             console.log(num);
+            console.log(ans);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">click here</button>
+</body>
+</html>

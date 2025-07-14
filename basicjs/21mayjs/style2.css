@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    background-color: blue;
+    border: 2px solid black;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 10px;
+}

@@ -1,0 +1,18 @@
+*{
+    background-color: red;
+}
+
+.img{
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+height: auto;
+flex-wrap: wrap;
+}
+
+.img_one{
+    margin: 20px;
+    height: auto;
+    width: auto;
+}
+

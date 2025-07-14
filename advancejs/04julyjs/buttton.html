@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function imgchance1(){
+            const obj=document.getElementById("box");
+            obj.style.borderRadius="20px";
+            obj.style.border="2px solid black";
+            obj.style.width="300px";
+            obj.style.padding="20px";
+        }
+
+        function imgchance2(){
+            const obj=document.getElementById("box");
+            obj.style.border="2px solid red";
+            obj.style.backgroundColor="yellow";
+        }
+         function imgchance3(){
+            const obj=document.getElementById("box");
+            obj.style.fontSize="20px";
+         obj.style.color="red";
+         obj.style.fontWeight="bold";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="imgchance1()">click1</button>
+    <button onclick="imgchance2()">click2</button>
+    <button onclick="imgchance3()">click3</button>
+
+    <div id="box">
+        A common theme in cat and dog stories is friendship and overcoming <br>
+         differences. Often, stories depict cats and dogs initially as rivals or strangers, <br>
+         but through shared experiences or a common goal, they learn to appreciate each other and become friends.br <br>
+          These stories often highlight the idea that even the most unlikely of pairs can form strong bonds. 
+
+    </div>
+</body>
+</html>
