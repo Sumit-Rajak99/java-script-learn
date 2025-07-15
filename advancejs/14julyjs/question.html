@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,31 @@
             },1)
              console.log(num);
             console.log(ans);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">click here</button>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            const num=[2,3,4,5,6];
+            const ans=num.reduce((key,item)=>{
+      return key*item;
+            },1)
+            document.writeln(num);
+            document.writeln("<br>")
+            document.writeln(ans);
         }
     </script>
 </head>

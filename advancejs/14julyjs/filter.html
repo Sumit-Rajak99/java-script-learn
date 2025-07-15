@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,5 +22,33 @@
 </head>
 <body>
     <button onclick="display()">click here</button>
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            const num=[23,4,5,6,7,7,2,3,4,4];
+            const ans=num.filter((key)=>{
+                if(key%2==0){
+                    return true;
+              }
+              else{
+                false;
+              }
+            })
+            console.log(num);
+            console.log(ans);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">clcik here</button>
 </body>
 </html>
