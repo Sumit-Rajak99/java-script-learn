@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>football</title>
+  <style>
+    #ball {
+      width: 50px;
+      position: absolute;
+      left: 10px;
+      
+    }
+  </style>
+  <script>
+    let left = 10;
+    let moveInterval;
+      
+    function myball() {
+      left = left + 5;
+      let obj = document.getElementById("ball"); 
+      obj.style.left = left + "px";
+
+      if(left>=1200){
+        clearInterval(moveInterval);
+      }
+    }
+
+    function mystart() {
+      moveInterval = setInterval(myball, 10);
+    }
+
+
+  </script>
+</head>
+<body>
+  <button onclick="mystart()">Click</button><br><br>
+  <img src="download (4).jpeg" alt="ball" id="ball">
+</body>
+</html>

@@ -1,0 +1,241 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> Calculator</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .calculator {
+      width: 300px;
+      background: #1c1c1c;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .display {
+      background: #000;
+      color: white;
+      font-size: 2rem;
+      text-align: right;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      height: 60px;
+      box-sizing: border-box;
+      overflow-x: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    button {
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
+      background: #333;
+      color: white;
+      transition: 0.2s ease;
+    }
+
+    button.orange {
+      background: #ff9500;
+      color: white;
+    }
+
+    button.gray {
+      background: #a5a5a5;
+      color: black;
+    }
+
+    button.zero {
+      grid-column: span 2;
+      border-radius: 35px;
+      width: 100%;
+    }
+  </style>
+</head>
+<html>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button class="gray" data-action="clear">AC</button>
+      <button class="gray" data-action="back">⌫</button>
+      <button class="gray" data-action="sign">+/-</button>
+      <button class="orange" data-action="operator" data-operator="/">÷</button>
+
+      <button data-number="7">7</button>
+      <button data-number="8">8</button>
+      <button data-number="9">9</button>
+      <button class="orange" data-action="operator" data-operator="*">×</button>
+
+      <button data-number="4">4</button>
+      <button data-number="5">5</button>
+      <button data-number="6">6</button>
+      <button class="orange" data-action="operator" data-operator="-">−</button>
+
+      <button data-number="1">1</button>
+      <button data-number="2">2</button>
+      <button data-number="3">3</button>
+      <button class="orange" data-action="operator" data-operator="+">+</button>
+
+      <button data-number="0" class="zero">0</button>
+      <button data-action="decimal">.</button>
+      <button class="orange" data-action="equals">=</button>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById("display");
+    let current = '';
+    let previous = '';
+    let operator = '';
+    let shouldResetScreen = false;
+
+    function updateDisplay() {
+      if (operator && !shouldResetScreen) {
+        display.textContent = `${previous} ${operatorSymbol(operator)} ${current}`;
+      } else if (operator && shouldResetScreen) {
+        display.textContent = `${previous} ${operatorSymbol(operator)}`;
+      } else {
+        display.textContent = current || '0';
+      }
+    }
+
+    function operatorSymbol(op) {
+      return op === '/' ? '÷' : op === '*' ? '×' : op;
+    }
+
+    function appendNumber(number) {
+      if (current === '0' || shouldResetScreen) {
+        current = number;
+        shouldResetScreen = false;
+      } else {
+        current += number;
+      }
+      updateDisplay();
+    }
+
+    function chooseOperator(op) {
+      if (current === '') return;
+      if (operator !== '') compute();
+      previous = current;
+      operator = op;
+      shouldResetScreen = true;
+      updateDisplay();
+    }
+
+    function compute() {
+      const a = parseFloat(previous);
+      const b = parseFloat(current);
+      if (isNaN(a) || isNaN(b)) return;
+
+      switch (operator) {
+        case '+': current = (a + b).toString(); break;
+        case '-': current = (a - b).toString(); break;
+        case '*': current = (a * b).toString(); break;
+        case '/': current = b !== 0 ? (a / b).toString() : "Error"; break;
+      }
+
+      operator = '';
+      previous = '';
+      shouldResetScreen = true;
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      current = '';
+      previous = '';
+      operator = '';
+      shouldResetScreen = false;
+      updateDisplay();
+    }
+
+    function addDecimal() {
+      if (!current.includes('.')) {
+        current += '.';
+        updateDisplay();
+      }
+    }
+
+    function toggleSign() {
+      if (!current) return;
+      current = (parseFloat(current) * -1).toString();
+      updateDisplay();
+    }
+
+    function applyPercent() {
+      if (!current) return;
+      current = (parseFloat(current) / 100).toString();
+      updateDisplay();
+    }
+
+    function backspace() {
+      if (shouldResetScreen) return;
+      current = current.slice(0, -1);
+      updateDisplay();
+    }
+
+    document.querySelectorAll("button").forEach(button => {
+      const number = button.dataset.number;
+      const action = button.dataset.action;
+      const op = button.dataset.operator;
+
+      if (number !== undefined) {
+        button.addEventListener("click", () => appendNumber(number));
+      }
+
+      if (action === "clear") {
+        button.addEventListener("click", clearDisplay);
+      }
+
+      if (action === "back") {
+        button.addEventListener("click", backspace);
+      }
+
+      if (action === "decimal") {
+        button.addEventListener("click", addDecimal);
+      }
+
+      if (action === "sign") {
+        button.addEventListener("click", toggleSign);
+      }
+
+      if (action === "percent") {
+        button.addEventListener("click", applyPercent);
+      }
+
+      if (action === "operator") {
+        button.addEventListener("click", () => chooseOperator(op));
+      }
+
+      if (action === "equals") {
+        button.addEventListener("click", compute);
+      }
+    });
+
+    updateDisplay();
+  </script>
+</body>
+</html>
+
+

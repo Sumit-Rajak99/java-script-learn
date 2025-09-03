@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #box {
+            width: 300px;
+            height: 50px;
+            box-shadow: 3px 3px gray;
+            font-size: 30px;
+            font-weight: bold;
+            color: gray;
+        }
+
+        button {
+            width: 50px;
+            padding: 10px;
+            background-color:rgba(41, 40, 40, 0.514);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+           border-radius: 10px;
+        }
+
+         button:hover{
+         background-color: orangered;
+         font-size: 20px;
+         }
+
+        #wrapper {
+            margin-left: 250px;
+            background-color:black;
+            width: 300px;
+            height: auto;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px;
+            box-shadow: 10px 10px 10px gray;
+
+           border: none;
+           border-radius: 10px;
+           
+            flex-direction: column;
+        align-items: center;
+        }
+        .box{
+           border: none; 
+           border-radius: 10px;
+        }
+        .C{
+            background-color: orangered;
+
+        }
+
+        .C:hover{
+            font-size: 20px;
+
+        }
+    </style>
+
+    <script>
+        function myBack(){
+            let boxval= document.getElementById('box').value;
+            let myval= boxval.substring(0, boxval.length-1);
+            document.getElementById("box").value=myval;
+        }
+    </script>
+</head>
+<body bgcolor="lightblue"> 
+    <div id="wrapper">
+        <input type="text" id="box" class="box"> <br>
+
+        <button id="btn1"
+        onclick="document.getElementById('box').value+=document.getElementById('btn1').innerHTML">1</button>
+
+        <button id="btn2"
+        onclick="document.getElementById('box').value+=document.getElementById('btn2').innerHTML">2</button>
+
+        <button id="btn3"
+        onclick="document.getElementById('box').value+=document.getElementById('btn3').innerHTML">3</button>
+
+        <button id="btn4"
+        onclick="document.getElementById('box').value+=document.getElementById('btn4').innerHTML">4</button> <br>
+
+        <button id="btn5"
+        onclick="document.getElementById('box').value+=document.getElementById('btn5').innerHTML">5</button>
+
+        <button id="btn6"
+        onclick="document.getElementById('box').value+=document.getElementById('btn6').innerHTML">6</button>
+
+        <button id="btn7"
+        onclick="document.getElementById('box').value+=document.getElementById('btn7').innerHTML">7</button> 
+
+        <button id="btn8"
+        onclick="document.getElementById('box').value+=document.getElementById('btn8').innerHTML">8</button> <br>
+
+        <button id="btn9"
+        onclick="document.getElementById('box').value+=document.getElementById('btn9').innerHTML">9</button>
+
+        <button id="btn0"
+        onclick="document.getElementById('box').value+=document.getElementById('btn0').innerHTML">0</button> 
+
+        <button>.</button>
+
+        <button id="btnplus" onclick="document.getElementById('box').value+=document.getElementById('btnplus').innerHTML">+</button> <br>
+        <button id="btnminus" onclick="document.getElementById('box').value+=document.getElementById('btnminus').innerHTML">-</button> 
+        <button id="btndevided" onclick="document.getElementById('box').value+=document.getElementById('btndevided').innerHTML">/</button> 
+        <button id="btnmulti" onclick="document.getElementById('box').value+=document.getElementById('btnmulti').innerHTML">*</button>
+
+        <button onclick="document.getElementById('box').value=eval(document.getElementById('box').value)">=</button> <br>
+        <button onclick="document.getElementById('box').value=''" class="C">AC</button>
+        <button onclick="myBack()" class="C">C</button>
+    </div>
+</body>
+</html>

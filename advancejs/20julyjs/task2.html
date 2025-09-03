@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Swap</title>
+  <style>
+    .img {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .img img {
+      cursor: pointer;
+      width: 200px;
+      transition: transform 0.3s;
+    }
+
+    .img img:hover {
+      transform: scale(1.1);
+    }
+
+    #mainImage {
+      display: block;
+      margin: 0 auto;
+      width: 500px;
+      border: 3px solid orange;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="img">
+    <img src="balhanumanji.jpg" alt="img1" onclick="changeImage(this)">
+    <img src="balhanumanji2.jpg" alt="img2" onclick="changeImage(this)">
+    <img src="main2.jpg" alt="img3" onclick="changeImage(this)">
+  </div>
+
+  <img src="balhanumanji.jpg" alt="main" id="mainImage">
+
+  <script>
+    function changeImage(clickedImg) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = clickedImg.src;
+    }
+  </script>
+
+</body>
+</html>

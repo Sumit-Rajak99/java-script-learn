@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+          let btnval=document.getElementById("btn1");
+          let textval=document.getElementById("demo");
+
+          if(btnval.innerText==="show"){
+            btnval.innerText="hide";
+            textval.style.display="block";
+
+          }
+          else{
+             btnval.innerText="show";
+            textval.style.display="none";
+
+          }
+                }
+                
+    </script>
+</head>
+<body>
+    <h1 id="demo"> hide me </h1>
+
+    <button  onclick="display()" id="btn1">hide</button>
+</body>
+</html>

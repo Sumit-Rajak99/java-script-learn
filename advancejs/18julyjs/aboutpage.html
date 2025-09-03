@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getdata(){
+            let mynum =localStorage.getItem("name");
+            document.getElementById("demo").innerHTML="welcome "+mynum;
+        }
+    </script>
+</head>
+<body bgcolor="yellow">
+    <a href="homepage.html">haome page</a>
+        <a href="aboutpage.html">about page</a>
+            <a href="service.html">service page</a>
+            <hr>
+             <button onclick="getdata()" style="border-radius: 10px;border: none;color: rgb(14, 14, 14);padding: 10px; border: 2px solid black;">get data</button>
+            <h1 id="demo">our about</h1>
+</body>
+</html>

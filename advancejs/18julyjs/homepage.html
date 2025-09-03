@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setdata(){
+            let nm=document.getElementById("txt").value;
+            
+            localStorage.setItem("name",nm);
+            alert("name is successfully store");
+        }
+    </script>
+</head>
+<body bgcolor="gray">
+    <a href="homepage.html">haome page</a>
+        <a href="aboutpage.html">about page</a>
+            <a href="service.html">service page</a>
+            <hr>
+         enter name <input type="text" id="txt">
+            <button onclick="setdata()" style="border-radius: 10px;border: none;color: rgb(14, 14, 14);padding: 10px; border: 2px solid black;">set data</button>
+
+            <h1>our home</h1>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form After 5 Seconds</title>
+    <style>
+        #form-container {
+            display: none; 
+        }
+    </style>
+    <script>
+        var myint;
+
+        function showForm() {
+            document.getElementById("form-container").style.display = "block";
+        }
+
+        function handleClick() {
+            
+            if (!myint) {
+                myint = setTimeout(showForm, 5000);
+            }
+        }
+
+
+        window.onclick = handleClick;
+    </script>
+</head>
+<body>
+
+
+    <div id="form-container">
+        <h1>FORM</h1>
+        Enter your name: <input type="text"> <br><br>
+        Enter your email: <input type="email"><br><br>
+        Enter your password: <input type="password"><br><br>
+        Enter your contact: <input type="number"><br><br>
+        <button>Submit</button>
+    </div>
+</body>
+</html>

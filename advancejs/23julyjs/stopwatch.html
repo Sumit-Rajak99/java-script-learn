@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Example</title>
+    <script>
+        var myint;
+        var counter = 0;
+
+        function myfun() {
+            counter++;
+            document.getElementById("demo").innerHTML = counter;
+        }
+
+        function display() {
+            if (!myint) { 
+                myint = setInterval(myfun, 100);
+            }
+        }
+
+        function mystop() {
+            clearInterval(myint);
+            myint = null; 
+        }
+
+        function restart() {
+            mystop();     
+            counter = 0;
+            document.getElementById("demo").innerHTML = counter;
+            display();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="display()">Start</button>
+    <button onclick="mystop()">Stop</button>
+    <button onclick="restart()">Restart</button>
+    <br><br>
+    <span id="demo">0</span>
+</body>
+</html>

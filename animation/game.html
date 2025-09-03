@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Width Animation</title>
+  <style>
+    #box {
+      height: 10px;
+      width: 10px;
+      background-color: red;
+    }
+  </style>
+  <script>
+    let wid = 1; 
+    let Stop;
+
+    function myfun() {
+      wid = wid + 10;
+      let obj = document.getElementById("box");
+      obj.style.width = wid + "px";
+    }
+
+    function mystart() {
+      stop = setInterval(myfun, 100); 
+    }
+
+    function mystop() {
+      clearInterval(stop); 
+    }
+  </script>
+</head>
+<body>
+  <button onclick="mystart()">Start</button>
+  <button onclick="mystop()">Stop</button>
+  <div id="box"></div>
+</body>
+</html>

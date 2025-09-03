@@ -1,0 +1,32 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "rollno": 111,
+      "name": "sumit",
+      "city": "bhopal",
+      "fees": 46000
+    },
+    {
+      "id": "2",
+      "rollno": 121,
+      "name": "sid",
+      "city": "badi",
+      "fees": 45000
+    },
+    {
+      "id": "01",
+      "rollno": "121",
+      "name": "sasa",
+      "city": "badi",
+      "fees": "35000"
+    },
+    {
+      "id": "09",
+      "rollno": "102",
+      "name": "pawan",
+      "city": "badi",
+      "fees": "12"
+    }
+  ]
+}

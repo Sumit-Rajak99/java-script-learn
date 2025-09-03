@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // call back function / 
+
+
+
+        // function mycollege(){
+        //     console.log("my name summit rajak");
+        // }
+        // function myfees(){
+        //     console.log("my fees 70000rs/");
+        // }
+        // function display(myfun){
+        //     myfun();
+        // }
+
+        // display(mycollege);
+        //  display(myfees);
+
+
+
+
+
+
+        //  passing argumnet to callback functin / 
+
+    //   let coll=prompt("enter college");
+    //     function mycollege(nm){
+    //    console.log("mu college name is "+nm);
+    //     }
+    //     function display(myfun){
+    //         myfun(coll);
+          
+    //     }
+    //     display(mycollege);
+
+
+
+
+
+
+
+
+
+
+        // we can pass a also pass function 
+
+//         function display(myfun) {
+//             let num="sumit";
+//     myfun(num);  
+//        }
+
+// display(function(myfun) {
+//     console.log("this is "+myfun);
+// });
+
+
+
+
+// allow function in callback 
+
+// function display(mycallback) {
+//     mycallback("sid");
+// }
+
+// display((nm) => {
+//     console.log("this is my callback function " + nm);
+// });
+
+
+// Asynchronous function /
+
+// console.log("start");
+
+// setTimeout(() => {
+//     console.log("hello");
+// }, 2000);  
+
+// console.log("end");
+
+
+
+// Synchronous  function 
+
+
+// console.log("start");
+
+// function greet() {
+//     console.log("hello");
+// }
+
+// greet();\[]
+// console.log("end");
+
+
+
+
+
+
+function addNumber(num, callback) {
+    let result = num + 12;  
+    callback(result);
+}
+
+
+addNumber(5, (ans) => {
+    console.log("The result is: " + ans);
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #box {
+            width: 300px;
+            height: 50px;
+            box-shadow: 3px 3px 8px gray;
+            font-size: 30px;
+            font-weight: bold;
+            color: gray;
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button {
+            width: 50px;
+            padding: 10px;
+            background-color: rgb(40, 40, 41);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 10px 10px 10px gray;
+        }
+
+        #wrapper {
+            background-color: rgb(14, 13, 13);
+            width: 320px;
+            padding: 20px;
+            margin: 50px auto;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: -10px 10px 10px gray;
+            border-radius: 10px;
+        }
+
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        function myBack() {
+            let box = document.getElementById('box');
+            box.value = box.value.slice(0, -1);
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" id="box" readonly> <br>
+
+        <!-- Row 1 -->
+        <button onclick="box.value += '1'">1</button>
+        <button onclick="box.value += '2'">2</button>
+        <button onclick="box.value += '3'">3</button>
+        <button onclick="box.value += '4'">4</button><br>
+
+        <!-- Row 2 -->
+        <button onclick="box.value += '5'">5</button>
+        <button onclick="box.value += '6'">6</button>
+        <button onclick="box.value += '7'">7</button>
+        <button onclick="box.value += '8'">8</button><br>
+
+        <!-- Row 3 -->
+        <button onclick="box.value += '9'">9</button>
+        <button onclick="box.value += '0'">0</button>
+        <button onclick="box.value += '.'">.</button>
+        <button onclick="box.value += '+'">+</button><br>
+
+        <!-- Row 4 -->
+        <button onclick="box.value += '-'">-</button>
+        <button onclick="box.value += '/'">/</button>
+        <button onclick="box.value += '*'">*</button>
+        <button onclick="box.value = eval(box.value)">=</button><br>
+
+        <!-- Row 5 -->
+         <button onclick="box.value += '%'">%c</button>
+        <button onclick="box.value = ''">AC</button>
+        <button onclick="myBack()">C</button>
+    </div>
+
+    <script>
+        const box = document.getElementById('box');
+    </script>
+</body>
+</html>
