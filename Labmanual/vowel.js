@@ -5,6 +5,7 @@ let count2=" ";
 for (let i =0; i <= name.length - 1; i++) {
     if(name[i]== "a" ||name[i]=="e" || name[i]=="i" ||name[i]=="o" ||name[i]=="u"){
         count++;
+        document.getElementById("id").
         
     }
     else{
