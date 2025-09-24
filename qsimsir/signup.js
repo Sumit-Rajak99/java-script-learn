@@ -24,12 +24,20 @@ function loginuser() {
     };
 
     
-    if (localdata.username !== login.loginname) {
+    if (localdata.username != login.loginname || localdata.password!=login.loginpassword) {
         alert("User not found");
         return false;
     }
 
 
-
-    
+    if (localdata.username == login.loginname) {
+        alert("succesful ");
+        return false;
+    }
+   
 }
+     async function access(){
+        let data = await fetch('https://jsonplaceholder.typicode.com/comments')
+        let res =await data.JSON()
+
+    }
