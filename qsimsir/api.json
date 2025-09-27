@@ -1,0 +1,23 @@
+{
+    "student":[
+        {
+            "name":"sumit rajak",
+            "age":18,
+            "contact":42983498,
+            "email":"sumit@89u"
+        },
+         {
+            "name":"raj rajak",
+            "age":11,
+            "contact":8972983498,
+            "email":"sdjlkd@89u"
+        },
+         {
+            "name":"varun malviya",
+            "age":15,
+            "contact":429998,
+            "email":"suhj@89u"
+        }
+    ]
+}
+

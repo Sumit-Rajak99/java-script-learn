@@ -1,0 +1,3 @@
+fullform of json=javascript object notation;
+
+json me data object form me store hota hai 

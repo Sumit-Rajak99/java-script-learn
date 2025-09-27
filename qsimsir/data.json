@@ -1,0 +1,19 @@
+ {
+    "student":[
+        {
+            "name":"sumit",
+            "contact":4298732498,
+            "city":"bhopal",
+            "email":"sumit@98",
+            "age":20
+        },
+        {
+            "name":"sid",
+            "contact":429498,
+            "city":"indore",
+            "email":"sid@98",
+            "age":18
+        }
+
+    ]
+ }
