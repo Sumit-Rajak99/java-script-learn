@@ -38,4 +38,4 @@
 
  let getdata=JSON.parse(localStorage.getItem('userdata'))
  console.log(getdata.location);   
-  localStorage.clear();            
+  localStorage.clear();             
