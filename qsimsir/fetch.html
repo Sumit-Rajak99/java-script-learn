@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<table border="2px">
+            <thead>
+                <th>id</th>
+                <th>Name</th>
+                <th>email</th>
+                <th>body</th>
+            </thead>
+        <tbody id="showdata">
+
+        </tbody>
+
+    </table>
+<script src="fetch.js"></script>
+</body>
+</html>
+    <!-- fetch(url method) 
+     HTTP M=methods=get post delete put ,patch
+     
+     get-> use for access data 
+     post->insert data
+     delete-> delelete data
+     put /patch->edit data
+     
+     
+     synce=in JavaScript, sync means code runs one after another, step by step.
+👉 A new task won’t start until the current one is completely done.
+asynce=In JavaScript, async means:
+👉 Things don’t have to wait in line.
+👉 One task can start, and while it’s busy (like downloading data), JavaScript can move on to the next task
+promise= tree stage
+1. reject
+2.pending
+3.fulfill
+promise handle by .then() and .catch() if promise is done we use .then() and if promise is not 
+complete we use .catch()-->

@@ -1,0 +1,7 @@
+{
+  "student": [
+    { "id": 1, "name": "Sumit", "email": "sumit@test.com", "contact": "9876543210", "city": "Delhi" },
+    { "id": 2, "name": "Ram", "email": "ram@test.com", "contact": "8765432109", "city": "Mumbai" },
+    { "id": 3, "name": "Sonu", "email": "sonu@test.com", "contact": "7654321098", "city": "Kolkata" }
+  ]
+}
